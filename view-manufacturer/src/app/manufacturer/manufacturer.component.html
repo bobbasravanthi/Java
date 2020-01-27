@@ -1,0 +1,29 @@
+<div>
+  <p>Enter Manufacturer: <input type="string" [(ngModel)]="mfr"></p>
+  <p><button (click)="getManufacturerInfo()"> Get Info</button></p>
+  <div *ngIf="mfrInfo">
+    <table>
+     <tr>
+       <th *ngFor="let head of [mfrCol]">{{head}}</th>
+     </tr>
+      <tr *ngFor="let rowVal of mfrInfo">
+        <td>
+          {{rowVal.Mfr_ID}}
+        </td>
+        <td>
+
+        </td>
+        <td>
+          {{rowVal.City}}
+        </td>
+        <td>
+          {{rowVal.State}}
+        </td>
+        <td>
+          {{rowVal.Country}}
+        </td>
+      </tr>
+
+    </table>
+  </div>
+</div>
