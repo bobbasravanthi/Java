@@ -28,7 +28,7 @@ public class ManufacturerController {
 					);
 		 } else {
 			 ManufacturerInfo mfrInfo = restTemplate.build().getForObject("https://vpic.nhtsa.dot.gov/api/vehicles/GetManufacturerDetails/{mfr}?format=json", ManufacturerInfo.class, mfr);
-			 return ResponseEntity.status(HttpStatus.OK).body(mfrInfo);
+			 return ResponseEntity.status(HttpStatus.CREATED).body(mfrInfo);
 		 }
 		
 	}
